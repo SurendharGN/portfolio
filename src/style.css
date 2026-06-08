@@ -162,7 +162,7 @@ html, body {
 
 @media (max-width: 768px) {
   #app {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .center-rect {
@@ -191,7 +191,7 @@ html, body {
 
   .about-col p:first-child,
   .about-col p:not(:first-child) {
-    font-size: 12px;
+    font-size: 16px;
     margin-bottom: 0;
   }
 
