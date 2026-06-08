@@ -160,6 +160,47 @@ html, body {
   max-width: 480px;
 }
 
+.project-content {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 24px;
+}
+
+.project-title {
+  font-size: 5.3vw;
+  color: #8a8a8a;
+  line-height: 1;
+  letter-spacing: -1px;
+  font-weight: 900;
+}
+
+.project-text {
+  color: #8a8a8a;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: -1px;
+  line-height: -2px;
+}
+
+.project-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  flex-shrink: 0;
+}
+
+.project-img-lg {
+  aspect-ratio: 16 / 9;
+}
+
+.project-images-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
 @media (max-width: 768px) {
   #app {
     font-size: 16px;
@@ -197,5 +238,13 @@ html, body {
 
   .about-col .break {
     margin-bottom: 24px;
+  }
+
+  .project-title {
+    font-size: 9.2vw;
+  }
+
+  .project-images-duo {
+    grid-template-columns: 1fr;
   }
 }

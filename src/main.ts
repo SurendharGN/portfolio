@@ -2,12 +2,14 @@ import './style.css'
 
 const colors = ['#ff6b6b', '#ffd93d', '#6bcb77', '#4d96ff', '#c084fc']
 const projects = ['artruth', 'blume', 'beans', 'manam chennai', 'southern floorings']
+const projectSlugs = ['artruth', 'blume', 'beans', 'manam-chennai', 'southern-floorings']
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
 function bottomBar(currentPath: string) {
+  const isProject = isProjectPath(currentPath)
   const link1 =
-    currentPath === '/works'
+    currentPath === '/works' || isProject
       ? '<a href="/">home</a>'
       : '<a href="/works">works</a>'
   const link2 =
@@ -49,8 +51,8 @@ function renderHome() {
 function renderWorks() {
   const rows = projects.map((p, i) =>
     i < projects.length - 1
-      ? `<div class="works-row" data-color="${colors[i]}">${p}</div><div class="works-divider"></div>`
-      : `<div class="works-row" data-color="${colors[i]}">${p}</div>`
+      ? `<a href="/${projectSlugs[i]}" class="works-row" data-color="${colors[i]}">${p}</a><div class="works-divider"></div>`
+      : `<a href="/${projectSlugs[i]}" class="works-row" data-color="${colors[i]}">${p}</a>`
   ).join('')
 
   app.innerHTML = `
@@ -120,6 +122,36 @@ function renderContact() {
   `
 }
 
+function projectBlock(text: string, color: string, duo = false) {
+  const images = duo
+    ? `<div class="project-images-duo"><div class="project-img" style="background:${color}"></div><div class="project-img" style="background:${color}"></div></div>`
+    : `<div class="project-img project-img-lg" style="background:${color}"></div>`
+  return `<p class="project-text">${text}</p>${images}`
+}
+
+function renderProject(slug: string) {
+  const index = projectSlugs.indexOf(slug)
+  const name = projects[index] || slug
+
+  const blocks = [
+    { text: 'brand identity and packaging for a growing label.', color: colors[index % 5] },
+    { text: 'digital interface design for a creative platform.', color: colors[(index + 1) % 5] },
+    { text: 'visual identity and collateral for a cultural space.', color: colors[(index + 2) % 5] },
+  ]
+
+  app.innerHTML = `
+    <div class="project-content">
+      <div class="project-title">${name}</div>
+      ${blocks.map((b, i) => projectBlock(b.text, b.color, i === 1)).join('')}
+    </div>
+    ${bottomBar('/' + slug)}
+  `
+}
+
+function isProjectPath(path: string) {
+  return projectSlugs.includes(path.replace('/', ''))
+}
+
 function route(path: string) {
   if ((app as any).__interval) {
     clearInterval((app as any).__interval)
@@ -131,6 +163,8 @@ function route(path: string) {
     renderAbout()
   } else if (path === '/contact') {
     renderContact()
+  } else if (isProjectPath(path)) {
+    renderProject(path.replace('/', ''))
   } else {
     renderHome()
   }
