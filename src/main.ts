@@ -4,6 +4,8 @@ const colors = ['#ff6b6b', '#ffd93d', '#6bcb77', '#4d96ff', '#c084fc']
 const projects = ['artruth', 'blume', 'beans', 'manam chennai', 'southern floorings']
 const projectSlugs = ['artruth', 'blume', 'beans', 'manam-chennai', 'southern-floorings']
 
+const covers = ['/ikaiva/cover2.png']
+
 const app = document.querySelector<HTMLDivElement>('#app')!
 
 function bottomBar(currentPath: string) {
@@ -34,18 +36,11 @@ function bottomBar(currentPath: string) {
 
 function renderHome() {
   app.innerHTML = `
-    <div class="center-rect" id="rect" style="background:${colors[0]}"></div>
+    <div class="center-rect-wrap">
+      <div class="center-rect" style="background-image:url(${covers[0]})"></div>
+    </div>
     ${bottomBar('/')}
   `
-
-  let index = 0
-  const rect = document.querySelector<HTMLDivElement>('#rect')!
-  const interval = setInterval(() => {
-    index = (index + 1) % colors.length
-    rect.style.background = colors[index]
-  }, 1000)
-
-  ;(app as any).__interval = interval
 }
 
 function renderWorks() {
