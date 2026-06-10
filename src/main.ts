@@ -1,8 +1,8 @@
 import './style.css'
 
 const colors = ['#ff6b6b', '#ffd93d', '#6bcb77', '#4d96ff', '#c084fc']
-const projects = ['artruth', 'blume', 'beans', 'manam chennai', 'southern floorings']
-const projectSlugs = ['artruth', 'blume', 'beans', 'manam-chennai', 'southern-floorings']
+const projects = ['artruth', 'blume', 'beans', 'ikaiva studio', 'southern floorings']
+const projectSlugs = ['artruth', 'blume', 'beans', 'ikaiva', 'southern-floorings']
 
 const covers = ['/ikaiva/cover2.png']
 
@@ -138,49 +138,49 @@ const projectData: Record<string, ProjectData> = {
     services: 'brand strategy, visual identity, packaging, art direction',
     sections: [
       { heading: 'hero', images: 'hero' },
-      { heading: 'overview', text: 'artruth is a contemporary art platform bridging emerging artists with collectors through thoughtful digital and print experiences.', images: 'single' },
-      { heading: 'approach', text: 'a flexible system rooted in typographic clarity, muted tones, and generous whitespace — letting the art breathe.', images: 'gallery' },
-      { heading: 'outcome', text: 'a brand that feels invisible — the art stays center stage, exactly as intended.', images: 'single' },
+      { heading: 'overview', text: 'artruth is a premium dark chocolate brand built around craftsmanship, authenticity, and intentional consumption. the project explored how these ideas could be translated into a distinctive identity and packaging system that felt personal and genuine.', images: 'single' },
+      { heading: 'approach', text: 'every visual decision was guided by the philosophy behind the brand. typography, color, packaging, and layout systems were designed to reflect the character of the product and the values it represented. the founder\u2019s handwritten wordmark was preserved and refined as the logo, allowing the identity to retain a sense of personality and authenticity.', images: 'gallery' },
+      { heading: 'outcome', text: 'the project resulted in a cohesive brand system that connected the product, packaging, and philosophy into a unified experience. the identity established a strong visual presence while remaining rooted in the story and values that inspired the brand.', images: 'single' },
     ]
   },
   'blume': {
-    name: 'blume', category: 'digital design', year: '2024', role: 'ui/ux designer',
-    services: 'ui/ux design, design system, prototyping',
+    name: 'blume', category: 'brand identity', year: '2024', role: 'lead designer',
+    services: 'brand strategy, visual identity, packaging, art direction',
     sections: [
       { heading: 'hero', images: 'hero' },
-      { heading: 'overview', text: 'blume is a wellness platform redefining how people discover and engage with holistic health practices.', images: 'single' },
-      { heading: 'approach', text: 'organic shapes, warm gradients, and fluid micro-interactions that mirror natural movement.', images: 'gallery' },
-      { heading: 'outcome', text: 'a 40% increase in user engagement during beta — users cited the interface as a key reason for return.', images: 'single' },
+      { heading: 'overview', text: 'blume is a conceptual perfume brand created for a design competition. the project explored how branding and packaging could shape the perception of a fragrance through a distinctive visual identity.', images: 'single' },
+      { heading: 'approach', text: 'the identity was designed to create a memorable and cohesive brand experience across every touchpoint. from the logo system to the packaging applications, each element was developed to express the character of the brand and establish a strong visual presence.', images: 'gallery' },
+      { heading: 'outcome', text: 'the project received positive feedback from designers and industry professionals, demonstrating how a clear identity system can strengthen the perception of a product even within a conceptual context.', images: 'single' },
     ]
   },
   'beans': {
-    name: 'beans', category: 'packaging', year: '2023', role: 'art director',
-    services: 'packaging design, illustration direction, print production',
+    name: 'beans', category: 'brand identity', year: '2024', role: 'lead designer',
+    services: 'brand strategy, visual identity, packaging, art direction',
     sections: [
       { heading: 'hero', images: 'hero' },
-      { heading: 'overview', text: 'beans is a specialty coffee roastery bringing single-origin stories to the everyday cup.', images: 'single' },
-      { heading: 'approach', text: 'illustrated varietal maps, tactile paper stocks, and a color-coded origin system.', images: 'gallery' },
-      { heading: 'outcome', text: 'a 25% lift in retail velocity; the packaging was featured in a design annual.', images: 'single' },
+      { heading: 'overview', text: 'beans is a conceptual bakery and caf\u00e9 centered on handmade, freshly prepared goods. the project explored how the warmth, care, and individuality behind handmade products could be expressed through a visual identity that felt approachable and authentic.', images: 'single' },
+      { heading: 'approach', text: 'the identity was built around the idea that imperfections are a natural part of making things by hand. organic forms, expressive details, and human-centered visual elements were used throughout the system to reflect the freshness and craftsmanship behind the brand.', images: 'gallery' },
+      { heading: 'outcome', text: 'the result was a distinctive identity that captured the character of the brand while reinforcing its focus on handmade quality. the system created a consistent visual language that could be applied across packaging, communication, and future brand touchpoints.', images: 'single' },
     ]
   },
-  'manam-chennai': {
-    name: 'manam chennai', category: 'editorial design', year: '2023', role: 'designer',
-    services: 'editorial design, photography direction, production',
+  'ikaiva': {
+    name: 'ikaiva studio', category: 'multidisciplinary studio', year: '2024', role: 'creative director',
+    services: 'brand strategy, visual identity, website, communication',
     sections: [
       { heading: 'hero', images: 'hero' },
-      { heading: 'overview', text: 'manam chennai is a culture magazine documenting the people, spaces, and ideas shaping the city.', images: 'single' },
-      { heading: 'approach', text: 'a bold grid system, duotone photography, and a distinctively tactile paper choice.', images: 'gallery' },
-      { heading: 'outcome', text: 'sold out two print runs; now stocked in select bookstores across india.', images: 'single' },
+      { heading: 'overview', text: 'ikaiva is a multidisciplinary studio building work across design, technology, writing, and art. the project involved shaping the studio from its earliest foundations, defining not only how it looks, but also what it stands for and how it communicates its ideas.', images: 'single' },
+      { heading: 'approach', text: 'the identity was built around a simple belief: every work should be guided by purpose. this idea became the foundation for the studio\u2019s positioning, visual identity, communication, website, and social presence. rather than treating these as separate outputs, they were developed as parts of a single system that could grow alongside the studio.', images: 'gallery' },
+      { heading: 'outcome', text: 'the result was a cohesive identity that gave ikaiva a clear voice and direction. from its visual language to its digital presence, the studio was equipped with a framework that could support work across multiple disciplines while remaining consistent to its core belief.', images: 'single' },
     ]
   },
   'southern-floorings': {
-    name: 'southern floorings', category: 'brand identity', year: '2022', role: 'brand designer',
-    services: 'brand strategy, visual identity, stationery, signage',
+    name: 'southern floorings', category: 'digital presence', year: '2024', role: 'designer',
+    services: 'website design, content strategy, art direction',
     sections: [
       { heading: 'hero', images: 'hero' },
-      { heading: 'overview', text: 'southern floorings is a heritage tile manufacturer with decades of craft tradition.', images: 'single' },
-      { heading: 'approach', text: 'a mark inspired by tile geometry, paired with warm earth tones and craft-forward photography.', images: 'gallery' },
-      { heading: 'outcome', text: 'showroom footfall increased by 60% post-rebrand; the parent company adopted the identity group-wide.', images: 'single' },
+      { heading: 'overview', text: 'southern floorings is a tile manufacturing company specializing in handcrafted flooring solutions. the project focused on establishing a digital presence that could communicate the company\u2019s craftsmanship, story, and values beyond its physical products.', images: 'single' },
+      { heading: 'approach', text: 'rather than functioning as a traditional product catalogue, the website was designed as a storytelling platform. through careful use of imagery, content structure, and visual hierarchy, the experience was built to showcase the people, process, and craftsmanship behind the work while making information accessible and engaging.', images: 'gallery' },
+      { heading: 'outcome', text: 'the result was a digital presence that strengthened the company\u2019s credibility and visibility online. by providing a clearer way to communicate its story and showcase its work, the website became a valuable touchpoint for referrals, discovery, and brand awareness.', images: 'single' },
     ]
   }
 }
