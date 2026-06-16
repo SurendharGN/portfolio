@@ -110,10 +110,16 @@ html, body {
 }
 
 .works-rect {
-  flex: 1;
-  margin-top: 4px;
-  margin-bottom: 4px;
+  display: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  transition: opacity 0.15s;
   opacity: 0;
+}
+
+.works-rect.visible {
+  opacity: 1;
 }
 
 .works-rect.visible {
@@ -186,7 +192,7 @@ html, body {
 
 .project-title {
   font-size: 5.3vw;
-  color: #8a8a8a;
+  color: #000;
   line-height: 1;
   letter-spacing: -1px;
   font-weight: 900;
@@ -196,7 +202,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  color: #8a8a8a;
+  color: #000;
   font-weight: 800;
   font-size: 16px;
   letter-spacing: -1px;
@@ -229,6 +235,11 @@ html, body {
 
 .project-img-hero {
   aspect-ratio: 16 / 9;
+}
+
+.project-img-no-crop {
+  width: 100%;
+  display: block;
 }
 
 .project-images-duo {
@@ -290,9 +301,14 @@ html, body {
     height: 68vh;
   }
 
+  .center-rect-wrap .center-rect {
+    background-position: left bottom;
+  }
+
   .works-row,
   .contact-row {
     font-size: 9.2vw;
+    letter-spacing: -2px;
   }
 
   .about-title {
