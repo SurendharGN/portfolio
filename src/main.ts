@@ -100,13 +100,18 @@ function renderAbout() {
   `
 }
 
-const contactLinks = ['e-mail', 'linkedin', 'resume']
+const contactLinks = [
+  { label: 'e-mail', href: 'mailto:work.surendhar@gmail.com' },
+  { label: 'linkedin', href: 'https://www.linkedin.com/in/surendhar-gn/' },
+  { label: 'resume', href: 'https://drive.google.com/file/d/1pH1jICwinA7U0FIk72LhDrnaNcIwcgby/view' },
+  { label: 'portfolio', href: 'https://drive.google.com/file/d/1Odc2a2ETAYJJQgrMevXL2r3RkPwvCgUC/view' },
+]
 
 function renderContact() {
   const rows = contactLinks.map((link, i) =>
     i < contactLinks.length - 1
-      ? `<a href="#" class="contact-row">${link}</a><div class="works-divider"></div>`
-      : `<a href="#" class="contact-row">${link}</a>`
+      ? `<a href="${link.href}" target="_blank" class="contact-row">${link.label}</a><div class="works-divider"></div>`
+      : `<a href="${link.href}" target="_blank" class="contact-row">${link.label}</a>`
   ).join('')
 
   app.innerHTML = `
